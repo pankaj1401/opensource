@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Autosuggest</title>
+        <style type="text/css">
+            .output
+            {
+                font-family:Arial;
+                font-size: 10pt;
+                color:black;
+                padding-left: 3px;
+                padding-top: 3px;
+                border: 1px solid #000000;
+                background: #fff;
+                width:102px;
+                position:relative;
+                top: 2px;
+                left: 2px;
+            }
+            .outut a {
+                display: block;   
+            }
+            
+            .outut a:hover {
+                background: #FF8040;
+                cursor: pointer;
+            }
+        </style>
+        <script type="text/javascript" src="pautosuggest.js"></script>
+        <script type="text/javascript">
+            var suggestions = [
+                "Alabama", "Alaska", "Arizona", "Arkansas",
+                "California", "Colorado", "Connecticut",
+                "Delaware", "Florida", "Georgia", "Hawaii",
+                "Idaho", "Illinois", "Indiana", "Iowa",
+                "Kansas", "Kentucky", "Louisiana",
+                "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", 
+                "Mississippi", "Missouri", "Montana",
+                "Nebraska", "Nevada", "New Hampshire", "New Mexico", "New York",
+                "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", 
+                "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+                "Tennessee", "Texas", "Utah", "Vermont", "Virginia", 
+                "Washington", "West Virginia", "Wisconsin", "Wyoming"
+            ];
+            window.onload = function () {
+                /*
+                 @param: inputfield id
+                 @param: output container id
+                 @param: whether to show inline suggestion or not
+                 @param: sample data
+                */
+                PAutoSuggest.init('input_box', 'output_container',true, suggestions);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>AutoSuggest Example</h1>
+        <p><input type="text" id="input_box" /></p>
+        <div class="outut" id="output_container">
+        </div>
+    </body>
+</html>
